@@ -2,7 +2,7 @@ export default function Header() {
   return (
     <header className="profile-header">
       <img
-        src="src/assets/foto.png"
+        src="./src/assets/foto.png"
         alt="Foto de Perfil de Caio Bittencourt"
         className="profile-pic"
       />
@@ -12,7 +12,7 @@ export default function Header() {
         desenvolvedor front-end e UX/UI designer
       </p>
       <a
-        href="src/assets/caiobittencourt.pdf"
+        href="./src/assets/caiobittencourt.pdf"
         className="cv-button"
         target="_blank"
         rel="noopener noreferrer"
