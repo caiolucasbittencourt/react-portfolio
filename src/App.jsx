@@ -1,32 +1,100 @@
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Accordion from "./components/Accordion";
 import Footer from "./components/Footer";
 import "./index.css";
 
 export default function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <main className="portfolio-container">
+    <main className={`portfolio-container ${isLoaded ? "loaded" : ""}`}>
       <Header />
 
       <section className="accordion-section">
-        <Accordion title="Sobre mim">
+        <Accordion title="About me">
           <p className="about-text">
-            Me chamo Caio Lucas, tenho 25 anos e sou graduando em Análise e
-            Desenvolvimento de Sistemas. Desde a infância, sou fascinado pelo universo da tecnologia, um hobby que nos últimos dois anos se tornou meu principal objetivo de carreira. Fora dos estudos, sou fã de uma boa ficção científica e me aventuro no multiplayer de Halo Infinite.
+            Oi! Eu sou o Caio, graduando em Análise e Desenvolvimento de
+            Sistemas. Atuo como <strong>desenvolvedor front-end</strong> e{" "}
+            <strong>UX/UI designer</strong>, com foco em criar interfaces
+            intuitivas que proporcionem a melhor experiência para o usuário.
+          </p>
+          <br />
+          <p className="about-text">
+            Atualmente, busco uma oportunidade como{" "}
+            <strong>Desenvolvedor Front-end</strong> para colaborar em projetos
+            desafiadores e continuar crescendo profissionalmente.
           </p>
         </Accordion>
 
-        <Accordion title="Skills">
+        <Accordion title="Technologies">
           <div className="skills-inline">
+            <span>HTML</span> <span className="separator">•</span>
+            <span>CSS</span> <span className="separator">•</span>
+            <span>Sass</span> <span className="separator">•</span>
+            <span>Tailwind CSS</span> <span className="separator">•</span>
+            <span>Bootstrap</span> <span className="separator">•</span>
             <span>JavaScript</span> <span className="separator">•</span>
             <span>TypeScript</span> <span className="separator">•</span>
+            <span>jQuery</span> <span className="separator">•</span>
             <span>React</span> <span className="separator">•</span>
-            <span>Angular</span> <span className="separator">•</span>
-            <span>Tailwind CSS</span>
+            <span>Next.js</span> <span className="separator">•</span>
+            <span>Vue.js</span> <span className="separator">•</span>
+            <span>Node.js</span> <span className="separator">•</span>
+            <span>MySQL</span> <span className="separator">•</span>
+            <span>Git</span> <span className="separator">•</span>
+            <span>GitHub</span> <span className="separator">•</span>
+            <span>Vite</span> <span className="separator">•</span>
+            <span>Figma</span> <span className="separator">•</span>
+            <span>VSCode</span> <span className="separator">•</span>
+            <span>Linux</span> <span className="separator">•</span>
+            <span>Windows</span>
           </div>
         </Accordion>
 
-        <Accordion title="Idiomas">
+        <Accordion title="Projects">
+          <ul className="info-list">
+            <li>
+              <strong>Masterclass Valorant Pro</strong>
+              <p className="project-description">
+                Campanha de captação de leads de uma masterclass de Valorant.
+              </p>
+              <a
+                href="https://github.com/caiolucasbittencourt/masterclass-valorant-pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                Ver no GitHub
+              </a>
+            </li>
+            <li>
+              <strong>DEVagas</strong>
+              <p className="project-description">
+                Newsletter diário de vagas de tecnologia, focada na comunidade
+                de desenvolvedores.
+              </p>
+              <a
+                href="https://github.com/caiolucasbittencourt/devagas"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                Ver no GitHub
+              </a>
+            </li>
+          </ul>
+        </Accordion>
+
+        <Accordion title="Languages">
           <ul className="info-list">
             <li>
               Português <span className="level">(nativo)</span>
@@ -38,12 +106,15 @@ export default function App() {
               Espanhol <span className="level">(avançado)</span>
             </li>
             <li>
-              Italiano <span className="level">(básico)</span>
+              Italiano <span className="level">(intermediário)</span>
+            </li>
+            <li>
+              Frânces <span className="level">(básico)</span>
             </li>
           </ul>
         </Accordion>
 
-        <Accordion title="Contato">
+        <Accordion title="Contact">
           <ul className="info-list">
             <li>
               <strong>E-mail:</strong> caiolucasbittencourt@hotmail.com
