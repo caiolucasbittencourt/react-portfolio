@@ -22,20 +22,21 @@ export default function App() {
       <section className="accordion-section">
         <Accordion title="About me">
           <p className="about-text">
-            Oi! Eu sou o Caio, graduando em Análise e Desenvolvimento de
-            Sistemas. Atuo como <strong>desenvolvedor front-end</strong> e{" "}
-            <strong>UX/UI designer</strong>, com foco em criar interfaces
+            Oi! Eu sou o Caio, graduando em{" "}
+            <strong>Análise e Desenvolvimento de Sistemas</strong>. Atuo como{" "}
+            <strong>desenvolvedor front-end</strong> e{" "}
+            <strong>designer UX/UI</strong>, com foco em criar interfaces
             intuitivas que proporcionem a melhor experiência para o usuário.
           </p>
           <br />
           <p className="about-text">
             Atualmente, busco uma oportunidade como{" "}
-            <strong>Desenvolvedor Front-end</strong> para colaborar em projetos
+            <strong>desenvolvedor front-end</strong> para colaborar em projetos
             desafiadores e continuar crescendo profissionalmente.
           </p>
         </Accordion>
 
-        <Accordion title="Technologies">
+        <Accordion title="Skills">
           <div className="skills-inline">
             <span>HTML</span> <span className="separator">•</span>
             <span>CSS</span> <span className="separator">•</span>
@@ -100,16 +101,13 @@ export default function App() {
               Português <span className="level">(nativo)</span>
             </li>
             <li>
-              Inglês <span className="level">(intermediário)</span>
+              Inglês <span className="level">(intermediário a avançado)</span>
             </li>
             <li>
               Espanhol <span className="level">(avançado)</span>
             </li>
             <li>
-              Italiano <span className="level">(intermediário)</span>
-            </li>
-            <li>
-              Frânces <span className="level">(básico)</span>
+              Italiano <span className="level">(básico a intermediário)</span>
             </li>
           </ul>
         </Accordion>

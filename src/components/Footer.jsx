@@ -7,7 +7,7 @@ export default function Footer() {
         rel="noopener noreferrer"
       >
         <img
-          src="./src/assets/linkedin.png"
+          src="linkedin.png"
           alt="My LinkedIn"
           className="social-icon"
         />
@@ -18,8 +18,8 @@ export default function Footer() {
         rel="noopener noreferrer"
       >
         <img
-          src="./src/assets/github.png"
-          alt="My Github"
+          src="github.png"
+          alt="My GitHub"
           className="social-icon"
         />
       </a>
